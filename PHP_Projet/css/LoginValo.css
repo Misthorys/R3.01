@@ -1,0 +1,117 @@
+/* CSS pour la page de connexion inspirée de Valorant */
+
+body.login-page {
+    background: radial-gradient(circle, #0f1923, #1b2735);
+    color: #eaeaea;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login-container {
+    background-color: #1b2735;
+    border: 2px solid #ff4655;
+    border-radius: 10px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.login-header {
+    margin-bottom: 20px;
+}
+
+.login-logo {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.login-title {
+    color: #ff4655;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #0f1923;
+    border: 1px solid #ff4655;
+    border-radius: 5px;
+    color: #eaeaea;
+    font-family: 'Rajdhani', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #00eaff;
+    box-shadow: 0 0 8px #00eaff;
+    outline: none;
+}
+
+.login-button {
+    background-color: #ff4655;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 70, 85, 0.4);
+    transition: all 0.4s ease;
+}
+
+.login-button:hover {
+    background-color: #e03e4e;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 70, 85, 0.6);
+}
+
+.login-footer {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.login-footer a {
+    color: #00eaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-footer a:hover {
+    color: #ff4655;
+    text-decoration: underline;
+}

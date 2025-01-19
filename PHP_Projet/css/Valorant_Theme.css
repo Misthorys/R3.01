@@ -1,0 +1,360 @@
+body {
+    background: radial-gradient(circle, #0f1923, #1b2735);
+    color: #eaeaea;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    text-align: center; /* Centre le texte horizontalement */
+    margin: 20px 0; /* Ajoute des marges en haut et en bas */
+    font-size: 24px; /* Taille ajustée si nécessaire */
+    color: #ff4655; /* Conserve la couleur thématique Valorant */
+}
+
+/* Titres et texte */
+h2, h3, h4, h5, h6 {
+    color: #ff4655;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: slideInFromLeft 1s ease;
+    //margin: 5px 0 5px 15px;
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+p {
+    line-height: 1.6;
+    color: #cccccc;
+    animation: fadeInUp 1.2s ease;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+a {
+    color: #00eaff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #ff4655;
+    transition: width 0.3s;
+}
+
+a:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+/* Boutons */
+button {
+    background-color: #ff4655;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    animation: pulse 2s infinite;
+}
+
+button:hover {
+    background-color: #e03e4e;
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(255, 70, 85, 0.5);
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center;
+    background-color: #1b2735;
+    padding: 10px 20px; /* Ajout d'espace autour */
+    border-bottom: 3px solid #ff4655;
+}
+
+.header-left {
+    display: flex;
+    align-items: center; /* Centre les images verticalement */
+    gap: 10px; /* Espace entre les images */
+}
+
+header img {
+    max-width: 50px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.navbar h1 {
+    text-align: center; /* Centre le titre horizontalement */
+    flex: 1; /* Permet de prendre l'espace restant entre les images et autres éléments */
+    margin: 0; /* Supprime les marges externes */
+    font-size: 24px;
+    color: #ff4655;
+    text-transform: uppercase;
+}
+
+@keyframes fadeInDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.navbar a {
+    color: #eaeaea;
+    padding: 10px 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.4s, transform 0.2s;
+}
+
+.navbar a:hover {
+    background-color: #ff4655;
+    color: #1b2735;
+    transform: scale(1.1);
+}
+
+/* Conteneurs principaux */
+.card {
+    background: linear-gradient(145deg, #1c2c40, #16202e);
+    color: #eaeaea;
+    border: 1px solid #ff4655;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    max-width: 800px;
+    animation: popIn 1s ease;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 70, 85, 0.6);
+}
+
+/* Pied de page */
+/* Assure que le footer reste en bas de la page */
+html, body {
+    height: 100%; /* Fait en sorte que l'ensemble de la page occupe 100% de la hauteur disponible */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Organise la page en une colonne */
+}
+
+main {
+    flex: 1; /* Permet à la section principale de s'étirer pour occuper tout l'espace restant */
+    padding: 20px;
+}
+
+footer {
+    background-color: #1b2735;
+    color: #eaeaea;
+    padding: 15px;
+    text-align: center;
+    border-top: 3px solid #ff4655;
+    animation: fadeInUp 1.2s ease;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* Formulaires */
+/* Champs de saisie : Taille et alignement */
+input, textarea, select {
+    background-color: #0f1923;
+    color: #eaeaea;
+    border: 1px solid #ff4655;
+    padding: 12px;
+    border-radius: 6px;
+    width: 50%; /* Réduction de la largeur */
+    margin-bottom: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-width: 50%; /* Limite maximale de la largeur */
+    width: 50%; /* Largeur cohérente avec les autres champs */
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #00eaff;
+    box-shadow: 0 0 8px #00eaff;
+    outline: none;
+}
+/* Formulaire */
+form {
+    max-width: 600px;
+    margin: 20px auto; /* Centrer le formulaire */
+}
+
+form div {
+    display: flex;
+    flex-direction: column; /* Aligner les champs verticalement */
+    margin-bottom: 15px; /* Espacement entre les champs */
+}
+
+form div label {
+    margin-bottom: 5px; /* Espacement entre le label et le champ */
+    font-weight: bold;
+    color: #eaeaea;
+    text-transform: uppercase;
+}
+
+form div input,
+form div textarea,
+form div select {
+    width: 100%; /* Occupe toute la largeur disponible */
+    padding: 10px;
+    font-size: 16px;
+    background-color: #0f1923;
+    color: #eaeaea;
+    border: 1px solid #ff4655;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form div input:focus,
+form div textarea:focus,
+form div select:focus {
+    border-color: #00eaff;
+    box-shadow: 0 0 10px #00eaff;
+    outline: none;
+}
+
+form div button {
+    background-color: #ff4655;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+form div button:hover {
+    background-color: #e03e4e;
+    transform: scale(1.05);
+}
+
+/* Tableaux */
+/* Tableaux : Ajustement au contenu */
+table {
+    width: auto; /* Largeur ajustée au contenu */
+    margin: 20px auto; /* Centre le tableau horizontalement */
+    border-collapse: collapse;
+    background-color: #1b2735; /* Fond sombre pour correspondre au thème Valorant */
+    color: #eaeaea;
+    border: 1px solid #ff4655; /* Bordure principale autour du tableau */
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden; /* Évite les débordements */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombre subtile */
+}
+
+thead th {
+    padding: 10px 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #ff4655;
+    color: #ffffff;
+    text-align: center; /* Centrer les en-têtes */
+    border-bottom: 2px solid #333333;
+}
+
+tbody tr {
+    background-color: #1b2735;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #e03e4e;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+td {
+    padding: 10px 15px;
+    font-size: 14px;
+    text-align: center; /* Centrer le contenu des cellules */
+    border-bottom: 1px solid #333333; /* Ajoute une ligne entre les cellules */
+    white-space: nowrap; /* Empêche le texte de s'étendre sur plusieurs lignes */
+}
+
+/* Boutons dans le tableau */
+table td button {
+    background-color: #ff4655;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+table td button:hover {
+    background-color: #e03e4e;
+    transform: scale(1.1);
+}
+/* Combobox ajustée */
+select {
+    width: 150px; /* Augmente la largeur des combobox */
+    background-color: #0f1923;
+    color: #eaeaea;
+    border: 1px solid #ff4655;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+select:focus {
+    border-color: #00eaff;
+    box-shadow: 0 0 8px #00eaff;
+    outline: none;
+}
+
+
